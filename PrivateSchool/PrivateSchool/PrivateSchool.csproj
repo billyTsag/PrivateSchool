@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2703CEF-8772-4710-B19B-F8C6D30B82BC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PrivateSchool</RootNamespace>
+    <AssemblyName>PrivateSchool</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssignmentCourseManager.cs" />
+    <Compile Include="AssignmentManager.cs" />
+    <Compile Include="HeadMasterManager.cs" />
+    <Compile Include="HMAssignmentMenu.cs" />
+    <Compile Include="CourseManager.cs" />
+    <Compile Include="HMCourseMenu.cs" />
+    <Compile Include="HeadMasterMenu.cs" />
+    <Compile Include="Migrations\201903081204366_The Beginning.cs" />
+    <Compile Include="Migrations\201903081204366_The Beginning.Designer.cs">
+      <DependentUpon>201903081204366_The Beginning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903081207279_Initial Fixes.cs" />
+    <Compile Include="Migrations\201903081207279_Initial Fixes.Designer.cs">
+      <DependentUpon>201903081207279_Initial Fixes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903101527487_M-M Relationship.cs" />
+    <Compile Include="Migrations\201903101527487_M-M Relationship.Designer.cs">
+      <DependentUpon>201903101527487_M-M Relationship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903101733488_TrainerEnrollment.cs" />
+    <Compile Include="Migrations\201903101733488_TrainerEnrollment.Designer.cs">
+      <DependentUpon>201903101733488_TrainerEnrollment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903141304406_Username-Password.cs" />
+    <Compile Include="Migrations\201903141304406_Username-Password.Designer.cs">
+      <DependentUpon>201903141304406_Username-Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903161941599_StudentAssignments.cs" />
+    <Compile Include="Migrations\201903161941599_StudentAssignments.Designer.cs">
+      <DependentUpon>201903161941599_StudentAssignments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903172101444_back-to-basics.cs" />
+    <Compile Include="Migrations\201903172101444_back-to-basics.Designer.cs">
+      <DependentUpon>201903172101444_back-to-basics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903181120588_head-master table.cs" />
+    <Compile Include="Migrations\201903181120588_head-master table.Designer.cs">
+      <DependentUpon>201903181120588_head-master table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903181210039_IsSubmitted.cs" />
+    <Compile Include="Migrations\201903181210039_IsSubmitted.Designer.cs">
+      <DependentUpon>201903181210039_IsSubmitted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Assignment.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\HeadMaster.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\StudentAssignments.cs" />
+    <Compile Include="Models\StudentEnrollement.cs" />
+    <Compile Include="Models\Trainer.cs" />
+    <Compile Include="Models\TrainerEnrollment.cs" />
+    <Compile Include="PasswordHashing.cs" />
+    <Compile Include="PrivateSchoolContext.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScheduleCourseManager.cs" />
+    <Compile Include="StudentEnrollmentManager.cs" />
+    <Compile Include="StudentManager.cs" />
+    <Compile Include="HMStudentMenu.cs" />
+    <Compile Include="StudentMenu.cs" />
+    <Compile Include="SyntheticData.cs" />
+    <Compile Include="TrainerEnrollmentManager.cs" />
+    <Compile Include="TrainerManager.cs" />
+    <Compile Include="HMTrainerMenu.cs" />
+    <Compile Include="TrainerMenu.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201903081204366_The Beginning.resx">
+      <DependentUpon>201903081204366_The Beginning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903081207279_Initial Fixes.resx">
+      <DependentUpon>201903081207279_Initial Fixes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903101527487_M-M Relationship.resx">
+      <DependentUpon>201903101527487_M-M Relationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903101733488_TrainerEnrollment.resx">
+      <DependentUpon>201903101733488_TrainerEnrollment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903141304406_Username-Password.resx">
+      <DependentUpon>201903141304406_Username-Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903161941599_StudentAssignments.resx">
+      <DependentUpon>201903161941599_StudentAssignments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903172101444_back-to-basics.resx">
+      <DependentUpon>201903172101444_back-to-basics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903181120588_head-master table.resx">
+      <DependentUpon>201903181120588_head-master table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903181210039_IsSubmitted.resx">
+      <DependentUpon>201903181210039_IsSubmitted.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
