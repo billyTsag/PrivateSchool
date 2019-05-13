@@ -10,11 +10,7 @@ namespace PrivateSchool
     class Program
     {        
         static void Main(string[] args)
-        {
-            // VERY IMPORTANT
-            SyntheticData.DoItOnce(); // Trexto mia fora na bei i vasi sto pc ke meta kanto comment POLI SIMADIKO allios tha crasharei
-            // VERY IMPORTANT
-            // Elpizw na treksei to synthetic, den to dokimasa gt eixa idi data ke fovomoun na to crasharw gt pezw me IDs
+        {         
 
             // HeadMaster
             // Username: sysadmin
